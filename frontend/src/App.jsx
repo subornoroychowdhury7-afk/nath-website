@@ -81,8 +81,21 @@ export default function App() {
       <footer className="site-footer">
         <div className="container footer-inner">
           <div>
-            <div className="brand-logo" style={{ marginBottom: 6 }}>
-              NATH <span className="accent-word">CAFE ZONE</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6 }}>
+              <img
+                src="/logo.jpg"
+                alt="NATH CAFE ZONE Logo"
+                style={{
+                  height: '36px',
+                  width: '36px',
+                  borderRadius: '8px',
+                  objectFit: 'cover',
+                  border: '1px solid rgba(255,255,255,0.12)',
+                }}
+              />
+              <div className="brand-logo">
+                NATH <span className="accent-word">CAFE ZONE</span>
+              </div>
             </div>
             <p className="footer-muted">
               {shopInfo.tagline} • Subhas More, Kanchrapara (743145)

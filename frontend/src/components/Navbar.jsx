@@ -10,6 +10,17 @@ export default function Navbar({ shopStatus }) {
     <header className="site-header">
       <div className="container nav-inner">
         <a href="#home" className="brand-logo" onClick={closeMenu}>
+          <img
+            src="/logo.jpg"
+            alt="NATH CAFE ZONE Logo"
+            style={{
+              height: '46px',
+              width: '46px',
+              borderRadius: '10px',
+              objectFit: 'cover',
+              border: '1px solid rgba(255,255,255,0.15)',
+            }}
+          />
           <span>
             NATH <span className="accent-word">CAFE ZONE</span>
           </span>

@@ -267,6 +267,12 @@ img {
   border-bottom: 1px solid var(--border-dark);
 }
 
+@keyframes bannerPulse {
+  0%   { opacity: 0.10; transform: scale(1.04); }
+  50%  { opacity: 0.16; transform: scale(1.07); }
+  100% { opacity: 0.10; transform: scale(1.04); }
+}
+
 .hero-grid-bg {
   position: absolute;
   inset: 0;

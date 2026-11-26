@@ -17,8 +17,36 @@ export default function Hero({ onSelectEstimatorTab }) {
 
   return (
     <section className="hero-section" id="home">
-      <div className="hero-grid-bg" />
-      <div className="container hero-layout">
+      {/* Banner background with multi-layer fade */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: 'url(/banner.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center top',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.13,
+          filter: 'blur(2px) saturate(1.4)',
+          transform: 'scale(1.04)',
+          zIndex: 0,
+          animation: 'bannerPulse 12s ease-in-out infinite',
+        }}
+      />
+      {/* Radial vignette to fade edges smoothly */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background:
+            'radial-gradient(ellipse 85% 70% at 50% 40%, transparent 25%, rgba(11,14,20,0.72) 65%, rgba(11,14,20,0.97) 100%)',
+          zIndex: 1,
+        }}
+      />
+      <div className="hero-grid-bg" style={{ zIndex: 2 }} />
+      <div className="container hero-layout" style={{ position: 'relative', zIndex: 3 }}>
         <div>
           <div className="hero-eyebrow">
             <span className="dot" />
