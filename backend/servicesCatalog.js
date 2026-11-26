@@ -9,6 +9,8 @@ export const SHOP_INFO = {
   },
   phoneDisplay: '+91 62901 34684',
   whatsappNumber: '916290134684',
+  googleMapsUrl: 'https://maps.app.goo.gl/ns1XGQU9zexE9soU7',
+  coordinates: { lat: 22.9353142, lng: 88.4537941 },
   hours: {
     days: 'Monday – Sunday',
     openHour: 10,

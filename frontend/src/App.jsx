@@ -7,6 +7,7 @@ import Hero from './components/Hero.jsx';
 import ServicesSection from './components/ServicesSection.jsx';
 import QuoteEstimator from './components/QuoteEstimator.jsx';
 import AboutWhyGallery from './components/AboutWhyGallery.jsx';
+import ReviewsSection from './components/ReviewsSection.jsx';
 import ContactHub from './components/ContactHub.jsx';
 
 export default function App() {
@@ -71,6 +72,7 @@ export default function App() {
           onLockQuote={handleLockQuote}
         />
         <AboutWhyGallery gallery={gallery} />
+        <ReviewsSection googleMapsUrl={shopInfo.googleMapsUrl} />
         <ContactHub
           shopInfo={shopInfo}
           prefillQuote={prefillQuote}

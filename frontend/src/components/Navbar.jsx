@@ -53,6 +53,11 @@ export default function Navbar({ shopStatus }) {
             </a>
           </li>
           <li>
+            <a href="#reviews" onClick={closeMenu}>
+              Reviews
+            </a>
+          </li>
+          <li>
             <a href="#contact" onClick={closeMenu}>
               Contact
             </a>

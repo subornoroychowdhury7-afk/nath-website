@@ -9,6 +9,7 @@ import {
   GALLERY_ITEMS,
   calculateEstimate,
 } from './servicesCatalog.js';
+import { getAllReviewsPayload, addWebsiteReview } from './reviewsService.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -87,7 +88,7 @@ app.get('/', (_req, res) => {
     ok: true,
     service: `${SHOP_INFO.name} API`,
     health: '/api/health',
-    endpoints: ['/api/health', '/api/services', '/api/estimate', '/api/enquiries'],
+    endpoints: ['/api/health', '/api/services', '/api/estimate', '/api/enquiries', '/api/reviews'],
   });
 });
 
@@ -228,6 +229,35 @@ app.get('/api/enquiries/:refId', async (req, res) => {
   } catch (err) {
     console.error('Lookup failed:', err);
     res.status(500).json({ ok: false, error: 'Lookup service unavailable.' });
+  }
+});
+
+app.get('/api/reviews', async (_req, res) => {
+  try {
+    const payload = await getAllReviewsPayload();
+    res.json(payload);
+  } catch (err) {
+    console.error('Failed to load reviews:', err);
+    res.status(500).json({ ok: false, error: 'Unable to load reviews right now.' });
+  }
+});
+
+app.post('/api/reviews', async (req, res) => {
+  try {
+    const review = await addWebsiteReview(req.body || {});
+    const updated = await getAllReviewsPayload();
+    res.status(201).json({
+      ok: true,
+      review,
+      ratingSummary: updated.ratingSummary,
+      reviews: updated.reviews,
+    });
+  } catch (err) {
+    const status = err.statusCode || 500;
+    res.status(status).json({
+      ok: false,
+      error: err.message || 'Unable to submit review right now.',
+    });
   }
 });
 

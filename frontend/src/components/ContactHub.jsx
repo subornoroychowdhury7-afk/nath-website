@@ -339,7 +339,7 @@ export default function ContactHub({ shopInfo, prefillQuote, onClearPrefill }) {
         <iframe
           title="NATH CAFE ZONE Map — Subhas More, Kanchrapara"
           className="map-frame"
-          src="https://www.google.com/maps?q=Subhas%20More%20Kanchrapara%20743145&output=embed"
+          src="https://www.google.com/maps?q=NATH+CAFE+ZONE,+22.9353142,88.4537941&output=embed"
           loading="lazy"
         />
       </div>

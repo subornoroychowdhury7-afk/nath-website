@@ -5,7 +5,7 @@ Split into independent **`frontend/`** (Vercel) and **`backend/`** (Render) fold
 ## Folder Structure
 
 - `frontend/` — React + Vite SPA (`90%` Obsidian/Studio Neutrals + `10%` Signal Orange `#FF4D00` accent)
-- `backend/` — Node.js + Express.js REST API (`GET /api/health`, `GET /api/services`, `POST /api/estimate`, `POST /api/enquiries`, `GET /api/enquiries/:refId`)
+- `backend/` — Node.js + Express.js REST API (`GET /api/health`, `GET /api/services`, `POST /api/estimate`, `POST /api/enquiries`, `GET /api/enquiries/:refId`, `GET/POST /api/reviews`)
 - `render.yaml` — Render Blueprint pointing to `backend/`
 
 ---
@@ -21,8 +21,11 @@ Split into independent **`frontend/`** (Vercel) and **`backend/`** (Render) fold
    - **Start Command:** `npm start`
    - **Health Check Path:** `/api/health`
 4. Copy your live Render URL (for example: `https://nath-cafe-zone-api.onrender.com`).
-5. *(After deploying Vercel)* Add an environment variable on Render:
+5. *(After deploying Vercel)* Add environment variables on Render:
    - `ALLOWED_ORIGINS` = `https://your-project.vercel.app` (comma-separated if you also have a custom domain).
+   - *(Optional, for live Google Maps Reviews auto-sync)*:
+     - `GOOGLE_PLACES_API_KEY` = your Google Cloud Places API (New) key
+     - `GOOGLE_PLACE_ID` = your NATH CAFE ZONE Google Place ID
 
 ---
 
