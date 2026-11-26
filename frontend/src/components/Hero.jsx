@@ -91,11 +91,35 @@ export default function Hero({ onSelectEstimatorTab }) {
         </div>
 
         <div className="hero-visual-card">
-          <img
-            className="hero-visual-img"
-            src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=1200&q=85"
-            alt="NATH CAFE ZONE printing and digital workstation"
-          />
+          {/* Banner image replaces the stock mobile phone photo */}
+          <div style={{ position: 'relative', overflow: 'hidden' }}>
+            <img
+              className="hero-visual-img"
+              src="/banner.jpg"
+              alt="NATH CAFE ZONE — Your One Stop Digital & Print Solution"
+              style={{
+                height: '300px',
+                width: '100%',
+                objectFit: 'cover',
+                objectPosition: 'center top',
+                display: 'block',
+              }}
+            />
+            {/* Bottom fade so it blends into the card body */}
+            <div
+              aria-hidden="true"
+              style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                height: '70px',
+                background:
+                  'linear-gradient(to bottom, transparent, var(--base-dark-elevated, #131823))',
+                pointerEvents: 'none',
+              }}
+            />
+          </div>
           <div className="hero-visual-body">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <span style={{ fontWeight: 700, fontSize: '0.95rem' }}>Quick Price Estimator</span>
