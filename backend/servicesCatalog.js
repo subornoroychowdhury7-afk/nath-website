@@ -7,8 +7,8 @@ export const SHOP_INFO = {
     line3: 'North 24 Parganas, West Bengal',
     pin: '743145',
   },
-  phoneDisplay: '+91 98300 00000',
-  whatsappNumber: '919999999999',
+  phoneDisplay: '+91 62901 34684',
+  whatsappNumber: '916290134684',
   hours: {
     days: 'Monday – Sunday',
     openHour: 10,
