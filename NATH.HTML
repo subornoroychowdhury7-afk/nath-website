@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NATH CAFE ZONE | Cyber Cafe & Printing Services</title>
+
+<meta name="description"
+content="NATH CAFE ZONE - Cyber Cafe, Printing, Flex Printing, Vinyl Printing, Trophy & Medal Customization, Button Badges and Mobile Recharge at Kanchrapara Subhas More.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f7f8fc;
+    color:#222;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    background:rgba(10,10,25,0.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:16px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:white;
+    font-size:23px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#ffcc00;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    font-size:14px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#ffcc00;
+}
+
+.menu-btn{
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(5,5,20,.94),
+        rgba(5,5,20,.65),
+        rgba(5,5,20,.25)
+    ),
+    url("https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=1800&q=85");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    padding:120px 25px 70px;
+    color:white;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 16px;
+    border:1px solid rgba(255,255,255,.3);
+    background:rgba(255,255,255,.08);
+    border-radius:50px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(42px,7vw,78px);
+    line-height:1.05;
+    max-width:850px;
+    font-weight:800;
+}
+
+.hero h1 span{
+    color:#ffcc00;
+}
+
+.hero p{
+    max-width:680px;
+    margin:25px 0;
+    color:#e5e5e5;
+    font-size:17px;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:13px 24px;
+    border-radius:8px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#ffcc00;
+    color:#111;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    background:#ffd633;
+}
+
+.btn-outline{
+    border:1px solid white;
+    color:white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:#111;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    padding:90px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title span{
+    color:#6c4cff;
+    font-weight:600;
+}
+
+.section-title h2{
+    font-size:38px;
+    margin:8px 0;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    background:white;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.service-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid #eee;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    transition:.35s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+}
+
+.service-img{
+    height:210px;
+    object-fit:cover;
+}
+
+.service-content{
+    padding:25px;
+}
+
+.service-icon{
+    width:52px;
+    height:52px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#f0edff;
+    color:#6c4cff;
+    border-radius:14px;
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.service-content h3{
+    margin-bottom:8px;
+}
+
+.service-content p{
+    color:#666;
+    font-size:14px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    background:#f5f5fa;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image{
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+.about-content h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    color:#666;
+    margin-bottom:18px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:25px;
+}
+
+.feature{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+    background:white;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.gallery-grid img{
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.03);
+}
+
+/* =========================
+   WHY US
+========================= */
+
+.why{
+    background:#0b0b1a;
+    color:white;
+}
+
+.why .section-title p{
+    color:#aaa;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.why-card{
+    padding:30px 20px;
+    text-align:center;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:18px;
+}
+
+.why-card .icon{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.why-card p{
+    color:#aaa;
+    font-size:14px;
+    margin-top:8px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:#f5f5fa;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info{
+    background:#0b0b1a;
+    color:white;
+    border-radius:20px;
+    padding:35px;
+}
+
+.contact-info h3{
+    font-size:27px;
+    margin-bottom:20px;
+}
+
+.contact-item{
+    display:flex;
+    gap:15px;
+    margin:25px 0;
+}
+
+.contact-item .icon{
+    font-size:22px;
+    color:#ffcc00;
+}
+
+.contact-item p{
+    color:#ccc;
+}
+
+.contact-form{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.input{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    margin-bottom:15px;
+    font-family:inherit;
+    outline:none;
+}
+
+textarea.input{
+    min-height:120px;
+    resize:vertical;
+}
+
+/* =========================
+   MAP
+========================= */
+
+.map{
+    width:100%;
+    height:350px;
+    border:0;
+    margin-top:40px;
+    border-radius:20px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:
+    linear-gradient(135deg,#6c4cff,#4525c5);
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    margin-bottom:25px;
+    color:#e8e4ff;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#06060e;
+    color:white;
+    padding:35px 20px;
+}
+
+.footer-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.footer-content p{
+    color:#999;
+    font-size:14px;
+}
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    z-index:999;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    .service-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:650px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#0b0b1a;
+        flex-direction:column;
+        padding:25px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .service-grid,
+    .why-grid,
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .about-content h2,
+    .cta h2{
+        font-size:30px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+NATH <span>CAFE ZONE</span>
+</div>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="badge">
+💻 Cyber Cafe • Printing • Customization
+</div>
+
+<h1>
+Your One Stop
+<span>Digital & Printing</span>
+Solution
+</h1>
+
+<p>
+Welcome to <b>NATH CAFE ZONE</b> — your trusted local Cyber Cafe
+for professional printing, customized products, flex & vinyl printing,
+trophy & medal customization, button badges and mobile recharge.
+</p>
+
+<div class="buttons">
+
+<a href="#services" class="btn btn-primary">
+Explore Services →
+</a>
+
+<a href="#contact" class="btn btn-outline">
+Contact Us
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>WHAT WE DO</span>
+
+<h2>Our Services</h2>
+
+<p>
+Quality work, affordable price and reliable service.
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<!-- SERVICE 1 -->
+
+<div class="service-card">
+
+<img class="service-img"
+src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=900&q=80"
+alt="Printing Service">
+
+<div class="service-content">
+
+<div class="service-icon">🖨️</div>
+
+<h3>All Types of Printing</h3>
+
+<p>
+Document printing, colour printing, photocopy,
+scanning and other printing requirements.
+</p>
+
+</div>
+</div>
+
+
+<!-- SERVICE 2 -->
+
+<div class="service-card">
+
+<img class="service-img"
+src="https://images.unsplash.com/photo-1614036634955-ae5e90f9b9eb?auto=format&fit=crop&w=900&q=80"
+alt="Trophy">
+
+<div class="service-content">
+
+<div class="service-icon">🏆</div>
+
+<h3>Trophy & Medal</h3>
+
+<p>
+Customized trophies, medals and awards for
+schools, clubs, sports and special occasions.
+</p>
+
+</div>
+</div>
+
+
+<!-- SERVICE 3 -->
+
+<div class="service-card">
+
+<img class="service-img"
+src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=900&q=80"
+alt="Flex Printing">
+
+<div class="service-content">
+
+<div class="service-icon">🪧</div>
+
+<h3>Flex Printing</h3>
+
+<p>
+High-quality flex printing for banners,
+events, shops, promotions and advertisements.
+</p>
+
+</div>
+</div>
+
+
+<!-- SERVICE 4 -->
+
+<div class="service-card">
+
+<img class="service-img"
+src="https://images.unsplash.com/photo-1600508774634-4e11d34730e2?auto=format&fit=crop&w=900&q=80"
+alt="Vinyl Printing">
+
+<div class="service-content">
+
+<div class="service-icon">🎨</div>
+
+<h3>Vinyl Printing</h3>
+
+<p>
+Creative vinyl printing for signs, stickers,
+branding and customized designs.
+</p>
+
+</div>
+</div>
+
+
+<!-- SERVICE 5 -->
+
+<div class="service-card">
+
+<img class="service-img"
+src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=900&q=80"
+alt="Button Badges">
+
+<div class="service-content">
+
+<div class="service-icon">🎖️</div>
+
+<h3>Button Badges</h3>
+
+<p>
+Personalized button badges for schools,
+events, organizations and celebrations.
+</p>
+
+</div>
+</div>
+
+
+<!-- SERVICE 6 -->
+
+<div class="service-card">
+
+<img class="service-img"
+src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=900&q=80"
+alt="Mobile Recharge">
+
+<div class="service-content">
+
+<div class="service-icon">📱</div>
+
+<h3>Mobile Recharge</h3>
+
+<p>
+Quick and convenient mobile recharge
+service for your everyday needs.
+</p>
+
+</div>
+</div>
+
+
+</div>
+</div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div class="about-image">
+
+<img
+src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85"
+alt="Cyber Cafe">
+
+</div>
+
+
+<div class="about-content">
+
+<span style="color:#6c4cff;font-weight:600;">
+ABOUT NATH CAFE ZONE
+</span>
+
+<h2>
+Your Local Digital Partner
+</h2>
+
+<p>
+NATH CAFE ZONE is a customer-focused Cyber Cafe and
+printing service centre located at Subhas More,
+Kanchrapara, North 24 Parganas, West Bengal.
+</p>
+
+<p>
+From everyday printing requirements to customized
+trophies, medals, flex printing, vinyl printing,
+button badges and mobile recharge — we aim to provide
+convenient services under one roof.
+</p>
+
+
+<div class="features">
+
+<div class="feature">✓ Quality Work</div>
+<div class="feature">✓ Affordable Price</div>
+<div class="feature">✓ Fast Service</div>
+<div class="feature">✓ Custom Designs</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="gallery" id="gallery">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>OUR WORK</span>
+
+<h2>Service Gallery</h2>
+
+<p>
+A glimpse of the type of work we provide.
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+<img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=800&q=80">
+
+<img src="https://images.unsplash.com/photo-1614036634955-ae5e90f9b9eb?auto=format&fit=crop&w=800&q=80">
+
+<img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80">
+
+<img src="https://images.unsplash.com/photo-1600508774634-4e11d34730e2?auto=format&fit=crop&w=800&q=80">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     WHY CHOOSE US
+========================= -->
+
+<section class="why">
+
+<div class="container">
+
+<div class="section-title">
+
+<span style="color:#ffcc00;">WHY US</span>
+
+<h2>Why Choose NATH CAFE ZONE?</h2>
+
+<p>
+We make your digital and printing work simple.
+</p>
+
+</div>
+
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<div class="icon">⚡</div>
+
+<h3>Fast Service</h3>
+
+<p>
+Quick and efficient service for your everyday needs.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="icon">💰</div>
+
+<h3>Affordable</h3>
+
+<p>
+Competitive pricing with quality work.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="icon">🎨</div>
+
+<h3>Customization</h3>
+
+<p>
+Creative customized products according to your needs.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="icon">🤝</div>
+
+<h3>Trusted Service</h3>
+
+<p>
+Friendly service for local customers and businesses.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+Need Printing or Customization?
+</h2>
+
+<p>
+Visit NATH CAFE ZONE today or contact us for your requirements.
+</p>
+
+<div class="buttons" style="justify-content:center;">
+
+<a href="#contact" class="btn btn-primary">
+Get in Touch
+</a>
+
+<a href="https://wa.me/919999999999"
+class="btn btn-outline">
+WhatsApp Us
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>CONTACT US</span>
+
+<h2>Visit NATH CAFE ZONE</h2>
+
+<p>
+We'd love to serve you.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-info">
+
+<h3>Let's Connect</h3>
+
+<div class="contact-item">
+
+<div class="icon">📍</div>
+
+<div>
+
+<strong>Address</strong>
+
+<p>
+NATH CAFE ZONE<br>
+Subhas More, Kanchrapara<br>
+North 24 Parganas, West Bengal<br>
+PIN - 743145
+</p>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="icon">📞</div>
+
+<div>
+
+<strong>Phone</strong>
+
+<p>
++91 XXXXXXXXXX
+</p>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="icon">🕒</div>
+
+<div>
+
+<strong>Business Hours</strong>
+
+<p>
+Monday – Sunday<br>
+10:00 AM – 9:00 PM
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="contact-form">
+
+<h3>Send an Enquiry</h3>
+
+<br>
+
+<form onsubmit="sendWhatsApp(event)">
+
+<input
+class="input"
+id="name"
+type="text"
+placeholder="Your Name"
+required>
+
+<input
+class="input"
+id="phone"
+type="tel"
+placeholder="Mobile Number"
+required>
+
+<select class="input" id="service">
+
+<option>Select Service</option>
+
+<option>Printing</option>
+<option>Trophy & Medal</option>
+<option>Flex Printing</option>
+<option>Vinyl Printing</option>
+<option>Button Badge</option>
+<option>Mobile Recharge</option>
+<option>Other</option>
+
+</select>
+
+<textarea
+class="input"
+id="message"
+placeholder="Tell us what you need..."
+required></textarea>
+
+<button
+class="btn btn-primary"
+style="border:0;cursor:pointer;width:100%;">
+Send Enquiry on WhatsApp
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<!-- MAP -->
+
+<iframe
+class="map"
+src="https://www.google.com/maps?q=Subhas%20More%20Kanchrapara%20743145&output=embed"
+loading="lazy">
+</iframe>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="footer-content">
+
+<div>
+
+<div class="logo">
+NATH <span>CAFE ZONE</span>
+</div>
+
+<p>
+Cyber Cafe • Printing • Customization
+</p>
+
+</div>
+
+
+<div>
+
+<p>
+© 2026 NATH CAFE ZONE. All Rights Reserved.
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+class="whatsapp"
+href="https://wa.me/919999999999"
+target="_blank"
+title="Chat on WhatsApp">
+
+💬
+
+</a>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
+
+}
+
+
+/* WhatsApp enquiry */
+
+function sendWhatsApp(event){
+
+    event.preventDefault();
+
+    const name =
+    document.getElementById("name").value;
+
+    const phone =
+    document.getElementById("phone").value;
+
+    const service =
+    document.getElementById("service").value;
+
+    const message =
+    document.getElementById("message").value;
+
+
+    const whatsappNumber =
+    "919999999999";
+
+
+    const text =
+`Hello NATH CAFE ZONE,
+
+My Name: ${name}
+Mobile: ${phone}
+Service: ${service}
+
+Requirement:
+${message}`;
+
+
+    const url =
+    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+
+    window.open(url,"_blank");
+
+}
+
+</script>
+
+</body>
+</html>
