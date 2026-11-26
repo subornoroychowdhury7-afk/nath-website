@@ -22,7 +22,7 @@ export default function QuoteEstimator({ activeTab, onTabChange, onLockQuote }) 
   const [flexVinyl, setFlexVinyl] = useState({
     widthFt: 6,
     heightFt: 3,
-    media: 'star-flex',
+    media: 'black-media-flex',
     quantity: 1,
     grommets: true,
   });
@@ -267,9 +267,9 @@ export default function QuoteEstimator({ activeTab, onTabChange, onLockQuote }) 
                       value={flexVinyl.media}
                       onChange={(e) => setFlexVinyl({ ...flexVinyl, media: e.target.value })}
                     >
-                      <option value="normal-flex">Normal Flex (₹15/sq.ft)</option>
-                      <option value="star-flex">Heavy Star Flex (₹28/sq.ft)</option>
-                      <option value="vinyl">Adhesive Vinyl (₹45/sq.ft)</option>
+                      <option value="normal-flex">Normal Flex (₹12/sq.ft)</option>
+                      <option value="black-media-flex">Black Media Flex (₹15/sq.ft)</option>
+                      <option value="vinyl">Adhesive Vinyl (₹25/sq.ft)</option>
                       <option value="vinyl-sunboard">Vinyl + Sunboard Mount (₹95/sq.ft)</option>
                     </select>
                   </div>

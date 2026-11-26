@@ -57,13 +57,13 @@ export const SERVICES = [
     category: 'Signage & Flex',
     title: 'Flex Banner Printing',
     shortDesc:
-      'Weatherproof star-flex and frontlit banners for shops, Durga Puja pandals, events, and promotions.',
+      'Weatherproof normal flex, black media flex, and frontlit banners for shops, Durga Puja pandals, events, and promotions.',
     turnaround: 'Same Day',
-    startingPrice: 'From ₹15 / sq.ft',
+    startingPrice: 'From ₹12 / sq.ft',
     image:
       'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=900&q=80',
     specs: [
-      'Normal Flex & Heavy Star Backlit Media',
+      'Normal Flex & Black Media Flex',
       '1440 DPI Eco-Solvent Vivid Output',
       'Reinforced Metal Eyelets (Grommets)',
       'Custom Layout & Graphic Support',
@@ -76,7 +76,7 @@ export const SERVICES = [
     shortDesc:
       'Precision die-cut vinyl decals, glass branding, sunboard mounting, and waterproof product labels.',
     turnaround: 'Same Day – 24 hrs',
-    startingPrice: 'From ₹40 / sq.ft',
+    startingPrice: 'From ₹25 / sq.ft',
     image:
       'https://images.unsplash.com/photo-1600508774634-4e11d34730e2?auto=format&fit=crop&w=900&q=80',
     specs: [
@@ -190,17 +190,28 @@ export function calculateEstimate(payload = {}) {
   if (type === 'flex-vinyl') {
     const widthFt = Math.max(1, Math.min(100, Number(payload.widthFt) || 6));
     const heightFt = Math.max(1, Math.min(100, Number(payload.heightFt) || 3));
-    const media = ['normal-flex', 'star-flex', 'vinyl', 'vinyl-sunboard'].includes(payload.media)
-      ? payload.media
-      : 'star-flex';
+    const normalizedMedia =
+      payload.media === 'star-flex' ? 'black-media-flex' : payload.media;
+    const media = ['normal-flex', 'black-media-flex', 'vinyl', 'vinyl-sunboard'].includes(
+      normalizedMedia
+    )
+      ? normalizedMedia
+      : 'black-media-flex';
     const quantity = Math.max(1, Math.min(100, Number(payload.quantity) || 1));
     const grommets = payload.grommets !== false;
 
     const rates = {
-      'normal-flex': 15,
-      'star-flex': 28,
-      vinyl: 45,
+      'normal-flex': 12,
+      'black-media-flex': 15,
+      vinyl: 25,
       'vinyl-sunboard': 95,
+    };
+
+    const labels = {
+      'normal-flex': 'normal flex',
+      'black-media-flex': 'black media flex',
+      vinyl: 'adhesive vinyl',
+      'vinyl-sunboard': 'vinyl + sunboard mount',
     };
 
     const sqFt = widthFt * heightFt;
@@ -220,7 +231,7 @@ export function calculateEstimate(payload = {}) {
       discountApplied: discountRate > 0 ? '10% Multi-Banner Discount' : null,
       total,
       turnaround: media === 'vinyl-sunboard' ? '24 Hours' : 'Same Day',
-      summary: `${quantity}x ${widthFt}×${heightFt} ft (${sqFt} sq.ft) ${media.replace('-', ' ')}`,
+      summary: `${quantity}x ${widthFt}×${heightFt} ft (${sqFt} sq.ft) ${labels[media]}`,
     };
   }
 
